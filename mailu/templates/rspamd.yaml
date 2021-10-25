@@ -48,6 +48,8 @@ spec:
             value: {{ include "mailu.fullname" . }}-front
           - name: REDIS_ADDRESS
             value: {{ include "mailu.fullname" . }}-redis
+          - name: ADMIN_ADDRESS
+            value: {{ include "mailu.fullname" . }}-admin
           {{- if .Values.clamav.enabled }}
           - name: ANTIVIRUS
             value: clamav
